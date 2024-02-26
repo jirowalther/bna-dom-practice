@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Practice example</title>
+    <style>
+        .highlight {
+            color: red;
+            background-color: white;
+            padding: 10px;
+            width: 250px;
+            text-align: center;
+            size: 25px;
+        }
+    </style>
+  </head>
+  <body>
+      <section>
+        <img src="stanford.png" alt="Stanford Logo">
+        <p>Here we will add a link to the <a href="https://www.mozilla.org/">Mozilla homepage</a></p>
+      </section>
+      <script>
+        const link = document.querySelector("a");
+        link.textContent = "Mozilla Developer Network";
+        link.href = "https://developer.mozilla.org";
+
+        const sect = document.querySelector("section");
+        const para = document.createElement("p");
+        para.textContent = "Welcome to Stanford University";
+        sect.appendChild(para);
+
+        const text = document.createTextNode(" - the premire source for web development knowledge.");
+        const linkPara = document.querySelector("p");
+        linkPara.appendChild(text);
+
+        sect.removeChild(linkPara);
+        linkPara.remove();
+
+        para.setAttribute("class", "highlight");
+      </script>
+  </body>
+</html>
+

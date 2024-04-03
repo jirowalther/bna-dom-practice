@@ -1,2 +1,2 @@
 # bna-dom-practice
-Assignment 7: DOM and Browser Tools
+DOM and Browser Tools Practice
